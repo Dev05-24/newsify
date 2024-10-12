@@ -4,10 +4,11 @@ import Card from "./Card";
 const Newsapp = () => {
   const [search, setSearch] = useState("india");
   const [newsData, setNewsData] = useState([]);
+  const apiKey = "5b6eae97b4754db6a6b2392d700581b6";
 
   const getData = async () => {
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=${search}&apiKey=5b6eae97b4754db6a6b2392d700581b6`
+      `https://newsapi.org/v2/everything?q=${search}&apiKey=${apiKey}`
     );
     const jsonData = await response.json();
     // console.log(jsonData.articles);
