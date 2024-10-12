@@ -1,10 +1,10 @@
 import React from "react";
 
-const Card = ({ data }) => {
+const Card = (props) => {
   // console.log(data);
   return (
     <div className="card-container">
-      {data.map((currItem, index) => {
+      {props.data.map((currItem, index) => {
         if (!currItem.urlToImage) {
           return;
         } else {
